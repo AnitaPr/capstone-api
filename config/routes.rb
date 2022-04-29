@@ -29,4 +29,7 @@ Rails.application.routes.draw do
   delete "/ratings/:id" => "ratings#destroy"
 
 
+
+
+
 end

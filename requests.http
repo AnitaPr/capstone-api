@@ -26,3 +26,29 @@ Content-Type: application/json
 
 ### Users Destroy
 DELETE http://localhost:3000/users/3.json
+
+
+### Location_Types Index 
+GET http://localhost:3000/location_types
+
+### Location_Type Create
+POST http://localhost:3000/location_types.json
+Content-Type: application/json
+
+{
+  "description": "Indoor Pool"
+}
+
+### Location_Type Show
+GET http://localhost:3000/location_types/2.json
+
+
+### Location_Type Update
+PATCH http://localhost:3000/location_types/5.json
+Content-Type: application/json
+
+{
+  "description": "This is test"
+}
+### Location_Type Destroy
+DELETE http://localhost:3000/location_type/.json
