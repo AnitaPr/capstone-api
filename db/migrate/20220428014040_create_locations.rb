@@ -6,7 +6,7 @@ class CreateLocations < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :state
       t.string :location_type_id
-      t.string :integer
+  
 
       t.timestamps
     end
