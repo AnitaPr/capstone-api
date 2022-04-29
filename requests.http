@@ -52,3 +52,36 @@ Content-Type: application/json
 }
 ### Location_Type Destroy
 DELETE http://localhost:3000/location_type/.json
+
+### Locations Index 
+GET http://localhost:3000/locations
+
+### Locations Create
+POST http://localhost:3000/locations.json
+Content-Type: application/json
+
+{
+  "name": "test",
+  "description": "test",
+  "city": "test",
+  "state": "test",
+  "location_type_id": "1"
+}
+
+### Locations Show
+GET http://localhost:3000/locations/2.json
+
+### Locations Update
+PATCH http://localhost:3000/locations/5.json
+Content-Type: application/json
+
+{
+ "name": "test1",
+  "description": "test1",
+  "city": "test1",
+  "state": "test1",
+  "location_type_id": "2"
+}
+
+### Locations Destroy
+DELETE http://localhost:3000/locations/5.json
