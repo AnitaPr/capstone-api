@@ -85,3 +85,34 @@ Content-Type: application/json
 
 ### Locations Destroy
 DELETE http://localhost:3000/locations/5.json
+
+
+### Ratings Index 
+GET http://localhost:3000/ratings
+
+### Ratings Create
+POST http://localhost:3000/ratings.json
+Content-Type: application/json
+
+{
+  "user_id": "1",
+  "location_id": "4",
+  "rating": "5"
+}
+
+### Ratings Show
+GET http://localhost:3000/ratings/1.json
+
+### Ratings Update
+PATCH http://localhost:3000/ratings/2.json
+Content-Type: application/json
+
+{
+  "user_id": "1",
+  "location_id": "4",
+  "rating": "4"
+}
+
+
+### Ratings Destroy
+DELETE http://localhost:3000/ratings/2.json
