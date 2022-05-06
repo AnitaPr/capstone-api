@@ -1,4 +1,4 @@
-@jwt = c
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTE4OTAwOTZ9.l6GunKc20IGz5tzx-jEoumHP3Z4KsAFc-Qq-j6UY3b8
 
 
 ### Users Index 
@@ -9,10 +9,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test",
-  "email": "test@test.com",
+  "name": "Anita",
+  "email": "anita@test.com",
   "password": "password",
-  "password_digest": "password"
+  "password_confirmation": "password"
 }
 
 
@@ -21,8 +21,8 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "charlie@test.com",
-  "password": "password1"
+  "email": "anita@test.com",
+  "password": "password"
 }
 
 ### Users Show
@@ -30,6 +30,7 @@ GET http://localhost:3000/users/3.json
 
 ### Users Update
 PATCH http://localhost:3000/users/1.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -47,6 +48,7 @@ GET http://localhost:3000/location_types
 
 ### Location_Type Create
 POST http://localhost:3000/location_types.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -59,6 +61,7 @@ GET http://localhost:3000/location_types/2.json
 
 ### Location_Type Update
 PATCH http://localhost:3000/location_types/5.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -66,12 +69,14 @@ Content-Type: application/json
 }
 ### Location_Type Destroy
 DELETE http://localhost:3000/location_type/.json
+Authorization: Bearer {{jwt}}
 
 ### Locations Index 
 GET http://localhost:3000/locations
 
 ### Locations Create
 POST http://localhost:3000/locations.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -87,6 +92,7 @@ GET http://localhost:3000/locations/2.json
 
 ### Locations Update
 PATCH http://localhost:3000/locations/5.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -99,6 +105,7 @@ Content-Type: application/json
 
 ### Locations Destroy
 DELETE http://localhost:3000/locations/5.json
+Authorization: Bearer {{jwt}}
 
 
 ### Ratings Index 
@@ -106,6 +113,7 @@ GET http://localhost:3000/ratings
 
 ### Ratings Create
 POST http://localhost:3000/ratings.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -119,6 +127,7 @@ GET http://localhost:3000/ratings/1.json
 
 ### Ratings Update
 PATCH http://localhost:3000/ratings/2.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -130,3 +139,4 @@ Content-Type: application/json
 
 ### Ratings Destroy
 DELETE http://localhost:3000/ratings/2.json
+Authorization: Bearer {{jwt}}
