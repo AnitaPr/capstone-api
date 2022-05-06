@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   patch "/ratings/:id" => "ratings#update"
   delete "/ratings/:id" => "ratings#destroy"
 
-
+ #sessions
+ post "/sessions" => "sessions#create"
 
 
 

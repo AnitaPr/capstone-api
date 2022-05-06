@@ -1,3 +1,6 @@
+@jwt = c
+
+
 ### Users Index 
 GET http://localhost:3000/users
 
@@ -8,7 +11,18 @@ Content-Type: application/json
 {
   "name": "Test",
   "email": "test@test.com",
+  "password": "password",
   "password_digest": "password"
+}
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "charlie@test.com",
+  "password": "password1"
 }
 
 ### Users Show
