@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show, :location_type]
 
  def index
   locations = Location.all
@@ -22,6 +22,11 @@ class LocationsController < ApplicationController
   location = Location.find_by(id: params[:id])
   render json: location.as_json
  end 
+
+ def location_type
+  locations = Location.where(location_type_id: params[:type_id])
+  render json: locations.as_json
+ end
 
  def update
   location = Location.find_by(id: params[:id])

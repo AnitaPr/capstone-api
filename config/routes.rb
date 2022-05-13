@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/locations" => "locations#index"
   post "/locations" => "locations#create"
   get "/locations/:id" => "locations#show"
+  get "/location/:type_id" => "locations#location_type"
   patch "/locations/:id" => "locations#update"
   delete "/locations/:id" => "locations#destroy"
 
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
  #sessions
  post "/sessions" => "sessions#create"
 
-
+ #map
+ get "/map" => "map#search"
 
 end

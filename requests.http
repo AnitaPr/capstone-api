@@ -1,5 +1,7 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTE5ODE5MTV9.iBXJbSxGIZM_ftUazu_5oPon6gA2fNfneLYFaj3kPYA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTIzOTd9._9n9i25_kkjNXXKdR7fkJ_fWGscn-y3GK9gStoOriFU
 
+### Map Search
+GET http://localhost:3000/map
 
 ### Users Index 
 GET http://localhost:3000/users
@@ -89,6 +91,9 @@ Content-Type: application/json
 
 ### Locations Show
 GET http://localhost:3000/locations/2.json
+
+### Location Type
+GET http://localhost:3000/location/1.json
 
 ### Locations Update
 PATCH http://localhost:3000/locations/5.json
