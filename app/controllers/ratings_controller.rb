@@ -6,7 +6,7 @@ end
 
 def create
   rating = Rating.new(
-    user_id: params[:user_id],
+    user_id: current_user.id,
     location_id: params[:location_id],
     rating: params[:rating]
   )

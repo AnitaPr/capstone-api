@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 
  def index
   locations = Location.all
-  render json: locations.as_json
+  render json: locations
  end
  
  def create
@@ -15,17 +15,17 @@ class LocationsController < ApplicationController
     location_type_id: params[:location_type_id]
   )
    location.save
-   render json: location.as_json
+   render json: location
  end 
 
  def show 
   location = Location.find_by(id: params[:id])
-  render json: location.as_json
+  render json: location
  end 
 
  def location_type
   locations = Location.where(location_type_id: params[:type_id])
-  render json: locations.as_json
+  render json: locations
  end
 
  def update
