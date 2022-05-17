@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTIzOTd9._9n9i25_kkjNXXKdR7fkJ_fWGscn-y3GK9gStoOriFU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTM2MDgwMzJ9.E1v-Iycy1Z0bOuIlqVC8sxcD4BULK1a4I1Faq_KYx4A
 
 ### Map Search
 GET http://localhost:3000/map
@@ -93,7 +93,7 @@ Content-Type: application/json
 GET http://localhost:3000/locations/2.json
 
 ### Location Type
-GET http://localhost:3000/location/1.json
+GET http://localhost:3000/location/4.json
 
 ### Locations Update
 PATCH http://localhost:3000/locations/5.json
